@@ -31,6 +31,15 @@
             margin-bottom: 20px;
         }
 
+        /* Add rainbow text effect */
+        .rainbow-text {
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline;
+        }
+
         .message {
             font-size: 18px;
             margin-bottom: 20px;
@@ -59,7 +68,7 @@
         <div class="header">
             <h1>김승빈 생일축하합니다</h1>
         </div>
-        <div class="message">너무 잘생겨 차마 눈을 못뜨게 하는 김승빈에게</div>
+        <div class="message"><span class="rainbow-text">너무 잘생겨 차마 눈을 못뜨게 하는 김승빈에게</span></div>
         <div class="message">벌써 우리가 만난 지 1년이 지났다.</div>
         <div class="message">생일이 입학 전이라 챙겨주지도 못했는데 ㅠㅠ 오늘은 꼭 챙겨준다.</div>
         <div class="message">1년동안 같은 학교, 반에서 생활하고, 기숙사에서도 맨날봐서 그런지 이젠 그만보고싶다 ㅡㅡ ㅋㅋㅋㅋ</div>
