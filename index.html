@@ -109,7 +109,7 @@
             left: 50%;
             transform: translateX(-50%);
             padding: 10px 20px;
-            font-size: 1.5em;
+            font-size: 1.2em;
             background-color: #FFD700;
             color: #282c34;
             border: none;
@@ -123,14 +123,14 @@
 <body>
     <img src="image1.jpg" alt="Spinning Image" class="spinning-image left">
     <div id="marquee">
-        <span>🎉 얼굴 1짱 김승빈 생일축하해 🎉</span>
+        <span> 언제나 잘생긴 김승빈 생일축하해 🎉</span>
     </div>
     <img src="image2.jpg" alt="Spinning Image" class="spinning-image right">
 
-    <button id="fireworksButton">폭죽 터트리기</button>
+    <button id="fireworksButton">폭죽 쏴기</button>
     <script>
         document.getElementById('fireworksButton').onclick = function () {
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 500; i++) {
                 let firework = document.createElement('div');
                 firework.classList.add('firework');
                 document.body.appendChild(firework);
