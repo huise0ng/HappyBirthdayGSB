@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>생일 축하 전광판</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282c34;
+            overflow: hidden;
+            /* Prevent scrolling */
+        }
+
+        #marquee {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            color: #FFD700;
+            font-family: 'Poor Story', cursive;
+            font-size: 4em;
+            text-shadow: 3px 3px #000;
+            z-index: 1;
+            /* Make sure marquee is above the spinning images */
+        }
+
+        #marquee span {
+            position: relative;
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+
+        .spinning-image {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: spin 10s linear infinite;
+            z-index: 0;
+            /* Make sure images are below the marquee text */
+            width: 300px;
+            /* Adjust the size of the image */
+            height: auto;
+            /* Maintain the aspect ratio of the image */
+        }
+
+        .spinning-image.left {
+            left: 0;
+        }
+
+        .spinning-image.right {
+            right: 0;
+            animation-direction: reverse;
+            /* Spin the other way */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translateY(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="image1.jpg" alt="Spinning Image" class="spinning-image left">
+    <div id="marquee">
+        <span>🎉 얼굴 1짱 김승빈 생일축하해 🎉</span>
+    </div>
+    <img src="image2.jpg" alt="Spinning Image" class="spinning-image right">
+</body>
+
+</html>
